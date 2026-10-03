@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "product": "排班资源暂占恢复",
+  "source_context": "当前 GitHub 账号内通过正式容器验证的 Python 后端项目群",
+  "actors": [
+    "活动统筹员",
+    "讲解员",
+    "学校联系人",
+    "场馆管理员"
+  ],
+  "states": [
+    "筹备",
+    "待确认",
+    "已排定",
+    "执行中",
+    "已结算"
+  ],
+  "invariants": [
+    "组合资源租约",
+    "确认版本比较",
+    "并发清理互斥",
+    "孤儿占用恢复"
+  ],
+  "sample_cases": [
+    {
+      "case_id": "0910032-016-A",
+      "actor": "活动统筹员",
+      "state": "筹备"
+    },
+    {
+      "case_id": "0910032-016-B",
+      "actor": "场馆管理员",
+      "state": "待确认"
+    }
+  ],
+  "tags": [
+    "reservation-lease",
+    "recovery-worker"
+  ]
+}
