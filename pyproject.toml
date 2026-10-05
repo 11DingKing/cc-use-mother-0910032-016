@@ -1,6 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "domain-contract-0910032-016"
-version = "0.1.0"
-description = "排班资源暂占恢复的领域约定与校验工具"
+version = "0.2.0"
+description = "排班资源暂占恢复：领域契约与组合资源租约服务"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.scripts]
+scheduling-lease-admin = "scheduling_lease.admin:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+domain_contract = []
